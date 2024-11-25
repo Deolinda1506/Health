@@ -76,6 +76,8 @@ schema_view = get_schema_view(
     generator_class=CustomSchemaGenerator,  # Use the custom schema generator
 )
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/login', views.MyTokenObtainPairView.as_view(), name="get_token"),
