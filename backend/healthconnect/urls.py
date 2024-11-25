@@ -6,6 +6,8 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from drf_yasg.generators import OpenAPISchemaGenerator
+from authentication import views as auth_views
+
 
 from authentication.serializers import UserSerializer
 
@@ -69,4 +71,6 @@ urlpatterns = [
     path('api/', include('authentication.urls')),
     path('api/appointments/', include('appointments.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('', auth_views.home, name='home'),  # Make sure this line is present
+
 ]
