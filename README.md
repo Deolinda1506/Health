@@ -47,20 +47,19 @@ HealthConnect is developed as part of the final assignment for introduction to s
 
 #### Clone the Repository:
 ```bash
-git clone https://github.com/Deolinda/health.git
-   cd health
-```markdown
-<details>
-  <summary><strong>Backend Setup</strong></summary>
-
+Clone the Repository:
 1. Clone the repository:
    ```bash
    git clone https://github.com/Deolinda/health.git
    cd health
-Create a virtual environment and activate it:
+
+
+ ### Create a virtual environment and activate it:
+
 python -m venv venv
 source venv/bin/activate  # For Windows: venv\Scripts\activate
-Install required packages:
+
+### Install required packages:
 pip install -r requirements.txt
 Configure the SQLite database in settings.py.
 Apply database migrations:
