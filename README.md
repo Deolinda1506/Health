@@ -9,7 +9,7 @@ HealthConnect is developed as part of the final assignment for introduction to s
 - **Frontend**: React, Vite, HTML, CSS, JavaScript, Tailwind CSS, Material UI
 - **Backend**: Django
 - **Database**: SQLite
-- **Deployment**: Netlify (Frontend), PythonAnywhere (Backend)
+- **Deployment**: Vercel (Frontend), PythonAnywhere (Backend)
 - **CI/CD**: GitHub Actions
 - **Authentication**: Django-Auth, JWT
 
@@ -41,7 +41,7 @@ HealthConnect is developed as part of the final assignment for introduction to s
 - SQLite
 - Git
 - PythonAnywhere
-- Netlify
+- vercel
 
 ### Installation
 
