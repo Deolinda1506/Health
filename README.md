@@ -53,41 +53,59 @@ Clone the Repository:
    git clone https://github.com/Deolinda/health.git
    cd health
 
-Backend Setup:
+2. Backend Setup
+Step 1: Create a Virtual Environment
 
-Create a virtual environment and activate it:
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-
-Install the required Python packages:
+Step 2: Install Required Python Packages
 
 pip install -r requirements.txt
-Configure SQLite database settings in settings.py.
+Step 3: Configure the Database
 
-Run migrations:
+Navigate to the backend/settings.py file. Ensure the database settings point to an SQLite database or configure it for another DBMS.
+Step 4: Run Migrations
 
 python manage.py migrate
-
-start the Django server:
+Step 5: Start the Backend Server
 
 python manage.py runserver
+The server will be accessible at http://127.0.0.1:8000/.
 
-Frontend Setup:
-
-Navigate to the frontend directory:
+3. Frontend Setup
+Step 1: Navigate to the Frontend Directory
 
 cd frontend
-Install React.js packages:
+Step 2: Install Required Packages
+
 pnpm install
-Start the React development server:
+Step 3: Configure Environment Variables
+
+Create a .env file in the frontend directory with the following:
+VITE_BACKEND_URL=http://127.0.0.1:8000
+Step 4: Start the Frontend Server
+
 pnpm run dev
+The server will be accessible at http://127.0.0.1:5173/.
 
+Running the Project
+
+Start the Backend Server:
+python manage.py runserver
+Start the Frontend Server:
+pnpm run dev
+Open your browser and navigate to http://127.0.0.1:5173/.
 Deployment
-Deployed the frontend to netlify.
-Deployed the backend to pythonanywhere. Webhook triggers deployment script which pulls latest code, applied migrations, amd restarts server.
-Set up CI/CD pipeline with GitHub Actions to automatically run tests and deploy the application.
 
+Frontend
+Deploy the frontend using Vercel:
+vercel --prod
+Backend
+Deploy the backend using PythonAnywhere:
+Upload the code to PythonAnywhere.
+Set up a virtual environment and install the required dependencies.
+Configure the database and environment variables.
+Run migrations and start the application.
 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
