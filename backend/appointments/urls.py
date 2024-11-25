@@ -31,4 +31,6 @@ urlpatterns = [
     
     # Report Management
     path('create_report', views.create_report, name="create_report"),
+    path('home/', views.homepage, name='appointments-home'),
+
 ]

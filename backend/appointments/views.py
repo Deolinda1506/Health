@@ -12,6 +12,13 @@ from django.utils import timezone
 from authentication.views import generate_token
 from django.contrib.sites.shortcuts import  get_current_site
 from django.db.models import Q
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def homepage(request):
+    return render(request, 'appointments/home.html')
+)
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
