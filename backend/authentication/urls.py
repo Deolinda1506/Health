@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from authentication import views as auth_views
 
 urlpatterns = [
     # Activation and Registration
@@ -13,4 +14,6 @@ urlpatterns = [
     # Availability and Profile
     path('api/change_availability', views.change_availability, name='change_availability'),
     path('api/get_profile', views.get_profile, name='get_profile'),
+    path('', auth_views.home, name='home'),  # This will route the root URL to the home view
+
 ]

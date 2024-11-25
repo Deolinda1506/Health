@@ -8,8 +8,10 @@ from rest_framework.decorators import action, api_view, permission_classes, auth
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken, AccessToken
 from rest_framework_simplejwt.authentication import JWTAuthentication
+from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
-from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail, EmailMultiAlternatives
 from healthconnect import settings
@@ -32,6 +34,12 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode  
 # Create your views here.
+
+@api_view(['GET'])
+def home(request):
+    # You can customize the message here
+    return Response({"message": "Welcome to the HealthConnect API homepage!"})
+
 class TokenGenerator(PasswordResetTokenGenerator):  
     def _make_hash_value(self, user, timestamp):  
         return (  
@@ -44,7 +52,7 @@ class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = MyTokenObtainPairSerializer
 
 @api_view(['GET', 'OPTIONS'])
-def activate(request, uidb64, token):  
+def activate(request,uidb64, token):  
     User = get_user_model()
     try:  
         uid = force_str(urlsafe_base64_decode(uidb64))  
@@ -70,7 +78,7 @@ def register(request):
         request (Request): The request object containing user data.
 
     Returns:
-        Response: A response object with success or error message.
+        Response({"message": "Welcome to the HealthConnect Registration page"})
     """
     if request.method == 'POST':
         user_data = request.data.copy()
