@@ -47,41 +47,38 @@ HealthConnect is developed as part of the final assignment for introduction to s
 
 #### Clone the Repository:
 ```bash
-git clone https://github.com/Deolinda/health.git
-cd health
-
-Backend Setup:
-
+### Backend Setup
+1.⁠ ⁠Clone the repository:
+   ```bash
+   git clone https://github.com/Deolinda/health.git
+   cd health
 Create a virtual environment and activate it:
 python -m venv venv
-source venv/bin/activate
-Install the required Python packages:
+source venv/bin/activate  # For Windows: venv\Scripts\activate
+Install required packages:
 pip install -r requirements.txt
-Configure SQLite database settings in settings.py.
-Run migrations:
+Configure the SQLite database in settings.py.
+Apply database migrations:
 python manage.py migrate
-Start the Django server:
+Start the backend server:
 python manage.py runserver
-Frontend Setup:
-
+Frontend Setup
 Navigate to the frontend directory:
 cd frontend
-Install React.js packages:
+Install the required packages:
 pnpm install
-Start the React development server:
+Start the frontend development server:
 pnpm run dev
-
 Deployment
 
-Frontend: Deployed using Vercel.
-Backend: Deployed on PythonAnywhere with deployment scripts to handle migrations and restart the server.
-
+Frontend: Deployed on Vercel for scalability and reliability.
+Backend: Deployed on PythonAnywhere with automated deployment scripts to handle migrations and restart the server.
 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 Acknowledgements
+
 Instructor: Tunde Isiaq Gbadamosi
 Course: Introduction to Software Engineering
 University: African Leadership University
-
