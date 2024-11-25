@@ -47,8 +47,13 @@ HealthConnect is developed as part of the final assignment for introduction to s
 
 #### Clone the Repository:
 ```bash
-### Backend Setup
-1.⁠ ⁠Clone the repository:
+git clone https://github.com/Deolinda/health.git
+   cd health
+```markdown
+<details>
+  <summary><strong>Backend Setup</strong></summary>
+
+1. Clone the repository:
    ```bash
    git clone https://github.com/Deolinda/health.git
    cd health
@@ -62,23 +67,4 @@ Apply database migrations:
 python manage.py migrate
 Start the backend server:
 python manage.py runserver
-Frontend Setup
-Navigate to the frontend directory:
-cd frontend
-Install the required packages:
-pnpm install
-Start the frontend development server:
-pnpm run dev
-Deployment
-
-Frontend: Deployed on Vercel for scalability and reliability.
-Backend: Deployed on PythonAnywhere with automated deployment scripts to handle migrations and restart the server.
-License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgements
-
-Instructor: Tunde Isiaq Gbadamosi
-Course: Introduction to Software Engineering
-University: African Leadership University
+</details> ```
