@@ -1,19 +1,52 @@
 # HealthConnect
 
-**HealthConnect** is an innovative telemedicine platform designed to bridge the gap between patients and healthcare providers by leveraging modern technology. Our platform aims to revolutionize healthcare delivery by providing accessible, efficient, and high-quality medical consultations remotely.
+HealthConnect is a telemedicine platform designed to provide seamless virtual healthcare services. The system connects patients with healthcare providers for consultations, scheduling, and medical records management. The platform features user-friendly interfaces for patients and healthcare providers, offering a streamlined solution to access medical services remotely.
 
-## Goal
+## Project Overview
+HealthConnect is developed as part of the final assignment for the Enterprise Web Development course. The system aims to enhance healthcare accessibility by allowing remote consultations, improving patient outcomes, and reducing the need for in-person visits. The system supports three primary user roles: **Patients**, **Healthcare Providers**, and **Administrators**.
 
-The primary goal of HealthConnect is to:
+## Technologies Used
+- **Frontend**: React, Vite, HTML, CSS, JavaScript, Tailwind CSS, Material UI
+- **Backend**: Django
+- **Database**: SQLite
+- **Deployment**: Netlify (Frontend), PythonAnywhere (Backend)
+- **CI/CD**: GitHub Actions
+- **Authentication**: Django-Auth, JWT
 
-- Provide accessible, efficient, and high-quality medical consultations remotely.
-- Empower patients and healthcare providers with modern technology to facilitate seamless communication and care.
+## Features and Functionalities
+1. **User Registration and Login**  
+   Users can register and log in to the system.  
+   Authentication is managed with Django-Auth and JWT.
 
-## Features
+2. **Appointment Scheduling**  
+   Patients can schedule consultations with healthcare providers and receive reminders.
 
-HealthConnect offers a wide range of features to ensure a comprehensive telemedicine experience:
+3. **Video Consultations**  
+   Patients and healthcare providers can conduct live video consultations using integrated WebRTC technology.
 
-- **Secure Video/Voice Consultations**: Connect with healthcare providers through secure and encrypted video or voice calls, ensuring privacy and confidentiality.
-- **Digital Prescriptions**: Receive prescriptions digitally, allowing for quick and easy access to medications.
-- **Health Monitoring**: Monitor your health metrics and receive insights and recommendations based on real-time data.
-- **Analytics**: Access detailed analytics to track your health progress and make informed decisions about your care.
+4. **Medical Records Management**  
+   Patients can manage their health records and share them with healthcare providers during consultations.
+
+5. **Healthcare Provider Dashboard**  
+   Healthcare providers can manage their consultations, patient records, and availability.
+
+6. **Admin Dashboard**  
+   Administrators can monitor system performance, manage users, and track consultations.
+
+## Project Setup
+
+### Prerequisites
+- Python 3.x
+- React Vite
+- SQLite
+- Git
+- PythonAnywhere
+- Netlify
+
+### Installation
+
+#### Clone the Repository:
+```bash
+git clone https://github.com/Deolinda/health.git
+cd health
+
