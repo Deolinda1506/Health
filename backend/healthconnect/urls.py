@@ -8,6 +8,10 @@ from rest_framework import permissions
 from drf_yasg.generators import OpenAPISchemaGenerator
 from appointments.views import homepage  
 from authentication import views as auth_views
+from django.conf.urls.static import static
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 
 
@@ -76,4 +80,4 @@ urlpatterns = [
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('', auth_views.home, name='home'),  # Make sure this line is present
     path('home/', views.homepage, name='healthconnect-home'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
