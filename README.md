@@ -53,17 +53,47 @@ Clone the Repository:
    git clone https://github.com/Deolinda/health.git
    cd health
 
+###Backend Setup:
 
- ### Create a virtual environment and activate it:
-
+Create a virtual environment and activate it:
 python -m venv venv
-source venv/bin/activate  # For Windows: venv\Scripts\activate
+source venv/bin/activate
 
-### Install required packages:
+###Install the required Python packages:
+
 pip install -r requirements.txt
-Configure the SQLite database in settings.py.
-Apply database migrations:
+Configure SQLite database settings in settings.py.
+
+###Run migrations:
+
 python manage.py migrate
-Start the backend server:
+
+###Start the Django server:
+
 python manage.py runserver
-</details> ```
+
+###Frontend Setup:
+
+Navigate to the frontend directory:
+
+cd frontend
+Install React.js packages:
+pnpm install
+Start the React development server:
+pnpm run dev
+
+##Deployment
+Deployed the frontend to netlify.
+Deployed the backend to pythonanywhere. Webhook triggers deployment script which pulls latest code, applied migrations, amd restarts server.
+Set up CI/CD pipeline with GitHub Actions to automatically run tests and deploy the application.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+##Acknowledgements
+
+Instructor: Tunde Isiaq Gbadamosi
+Course: Introduction to Software Engineering
+University: African Leadership University
+
