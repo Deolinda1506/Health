@@ -34,6 +34,9 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode  
 # Create your views here.
+def homepage(request):
+    # Define the logic for your homepage here
+    return render(request, 'home.html')  
 
 @api_view(['GET'])
 def home(request):
