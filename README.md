@@ -3,7 +3,7 @@
 HealthConnect is a telemedicine platform designed to provide seamless virtual healthcare services. The system connects patients with healthcare providers for consultations, scheduling, and medical records management. The platform features user-friendly interfaces for patients and healthcare providers, offering a streamlined solution to access medical services remotely.
 
 ## Project Overview
-HealthConnect is developed as part of the final assignment for the Enterprise Web Development course. The system aims to enhance healthcare accessibility by allowing remote consultations, improving patient outcomes, and reducing the need for in-person visits. The system supports three primary user roles: **Patients**, **Healthcare Providers**, and **Administrators**.
+HealthConnect is developed as part of the final assignment for introduction to software engineering course. The system aims to enhance healthcare accessibility by allowing remote consultations, improving patient outcomes, and reducing the need for in-person visits. The system supports three primary user roles: **Patients**, **Healthcare Providers**, and **Administrators**.
 
 ## Technologies Used
 - **Frontend**: React, Vite, HTML, CSS, JavaScript, Tailwind CSS, Material UI
